@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+.header, .footer {
+    background-color: #f8f8f8;
+    padding: 10px 20px;
+    text-align: center;
+}
+.content {
+    padding: 20px;
+}
+.search-bar {
+    margin-bottom: 20px;
+}
+.isp-list {
+    list-style-type: none;
+    padding: 0;
+}
+.isp-item {
+    background-color: #fff;
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.isp-item h3 {
+    margin: 0;
+    font-size: 20px;
+}
+.isp-item p {
+    margin: 5px 0;
+}
+.sort-options {
+    margin-bottom: 20px;
+}
+.sort-options p {
+    margin: 0;
+    font-weight: bold;
+}
+.sort-options label {
+    margin-right: 10px;
+}

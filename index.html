@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISP Search</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Searching ISP Made Easy!</h1>
+        <p>Total ISP: 09 | API Hits: 748</p>
+    </div>
+    <div class="content">
+        <div class="search-bar">
+            <label for="search">Search (by ISP name, price, rating): </label>
+            <input type="text" id="search" name="search" onkeyup="searchISP()">
+        </div>
+        <div class="sort-options">
+            <p>Sort by:</p>
+            <label><input type="radio" name="sort" value="price-asc" onclick="sortISP('price', 'asc')"> Price: Low to High</label>
+            <label><input type="radio" name="sort" value="price-desc" onclick="sortISP('price', 'desc')"> Price: High to Low</label>
+            <label><input type="radio" name="sort" value="rating-asc" onclick="sortISP('rating', 'asc')"> Rating: Low to High</label>
+            <label><input type="radio" name="sort" value="rating-desc" onclick="sortISP('rating', 'desc')"> Rating: High to Low</label>
+        </div>
+        <ul class="isp-list" id="isp-list">
+            <li class="isp-item" data-price="110" data-rating="3">
+                <h3>BSNL</h3>
+                <p>Price: 110</p>
+                <p>Max. Speed: 10mbps</p>
+                <p>Contact: 080-12345678 | contact@bsnl.co.in</p>
+                <p>Min. Plan: 100/-</p>
+                <p>Rating: 3</p>
+                <p>Affordable and reliable internet service.</p>
+                <a href="#">Link</a> | <a href="#">Share</a> | <a href="#">Download</a>
+            </li>
+            <li class="isp-item" data-price="450" data-rating="4">
+                <h3>Airtel</h3>
+                <p>Price: 450</p>
+                <p>Max. Speed: 50mbps</p>
+                <p>Contact: 080-44444121 | 121@in.airtel.com</p>
+                <p>Min. Plan: 450/-</p>
+                <p>Rating: 4</p>
+                <p>Our internet plans are now available at never-before prices.</p>
+                <a href="#">Link</a> | <a href="#">Share</a> | <a href="#">Download</a>
+            </li>
+            <li class="isp-item" data-price="600" data-rating="2">
+                <h3>Hathway</h3>
+                <p>Price: 600</p>
+                <p>Max. Speed: 25mbps</p>
+                <p>Contact: 080-65432100 | support@hathway.com</p>
+                <p>Min. Plan: 500/-</p>
+                <p>Rating: 2</p>
+                <p>High-speed internet with excellent customer service.</p>
+                <a href="#">Link</a> | <a href="#">Share</a> | <a href="#">Download</a>
+            </li>
+            <li class="isp-item" data-price="850" data-rating="5">
+                <h3>BBNL/BNET</h3>
+                <p>Price: 850</p>
+                <p>Max. Speed: 40mbps</p>
+                <p>Contact: 080-11112222 | info@bbnl.in</p>
+                <p>Min. Plan: 700/-</p>
+                <p>Rating: 5</p>
+                <p>Reliable broadband with extensive coverage.</p>
+                <a href="#">Link</a> | <a href="#">Share</a> | <a href="#">Download</a>
+            </li>
+            <li class="isp-item" data-price="600" data-rating="4">
+                <h3>ACT Broadband</h3>
+                <p>Price: 600</p>
+                <p>Max. Speed: 100mbps</p>
+                <p>Contact: 080-22334455 | care@actcorp.in</p>
+                <p>Min. Plan: 600/-</p>
+                <p>Rating: 4</p>
+                <p>Experience lightning-fast internet speeds.</p>
+                <a href="#">Link</a> | <a href="#">Share</a> | <a href="#">Download</a>
+            </li>
+            <li class="isp-item" data-price="700" data-rating="3">
+                <h3>YOU Broadband</h3>
+                <p>Price: 700</p>
+                <p>Max. Speed: 30mbps</p>
+                <p>Contact: 080-66778899 | helpdesk@youbroadband.in</p>
+                <p>Min. Plan: 650/-</p>
+                <p>Rating: 3</p>
+                <p>Consistent speeds and great customer support.</p>
+                <a href="#">Link</a> | <a href="#">Share</a> | <a href="#">Download</a>
+            </li>
+            <li class="isp-item" data-price="400" data-rating="2">
+                <h3>Tikona Digital Network</h3>
+                <p>Price: 400</p>
+                <p>Max. Speed: 20mbps</p>
+                <p>Contact: 080-44556677 | care@tikona.in</p>
+                <p>Min. Plan: 350/-</p>
+                <p>Rating: 2</p>
+                <p>Affordable internet plans for all your needs.</p>
+                <a href="#">Link</a> | <a href="#">Share</a> | <a href="#">Download</a>
+            </li>
+            <li class="isp-item" data-price="1500" data-rating="5">
+                <h3>Railtel</h3>
+                <p>Price: 1,500</p>
+                <p>Max. Speed: 60mbps</p>
+                <p>Contact: 080-99887766 | support@railtel.in</p>
+                <p>Min. Plan: 1,200/-</p>
+                <p>Rating: 5</p>
+                <p>High-speed internet with extensive coverage.</p>
+                <a href="#">Link</a> | <a href="#">Share</a> | <a href="#">Download</a>
+            </li>
+            <li class="isp-item" data-price="900" data-rating="3">
+                <h3>Reliance DSL</h3>
+                <p>Price: 900</p>
+                <p>Max. Speed: 45mbps</p>
+                <p>Contact: 080-11223344 | support@reliance.in</p>
+                <p>Min. Plan: 800/-</p>
+                <p>Rating: 3</p>
+                <p>High-speed internet with excellent customer service.</p>
+                <a href="#">Link</a> | <a href="#">Share</a> | <a href="#">Download</a>
+            </li>
+        </ul>
+    </div>
+    <div class="footer">
+        <p>&copy; 2024 ISP Search</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
